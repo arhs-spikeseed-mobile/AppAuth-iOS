@@ -512,6 +512,7 @@ static const NSUInteger kExpiryTimeTolerance = 60;
       [self tokenRefreshRequestWithAdditionalParameters:additionalParameters];
   [OIDAuthorizationService performTokenRequest:tokenRefreshRequest
                  originalAuthorizationResponse:_lastAuthorizationResponse
+                                 dispatchQueue: dispatchQueue
                                       callback:^(OIDTokenResponse *_Nullable response,
                                                  NSError *_Nullable error) {
     // update OIDAuthState based on response
