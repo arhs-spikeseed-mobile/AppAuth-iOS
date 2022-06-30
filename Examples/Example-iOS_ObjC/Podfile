@@ -2,12 +2,12 @@ platform :ios, '9.0'
 
 target 'Example-iOS_ObjC' do
   # AppAuth Pod
-  # In production, just use `pod 'AppAuth'` without the path reference.
-  pod 'AppAuth', :path => '../../'
+  # In production, just use `pod 'MasAppAuth'` without the path reference.
+  pod 'MasAppAuth', :path => '../../'
 end
 
 target 'Example-iOS_ObjC_Extension' do    
     # AppAuth/Core Pod
-    # In production, just use `pod 'AppAuth/Core'` without the path reference.
-    pod 'AppAuth/Core', :path => '../../'
+    # In production, just use `pod 'MasAppAuth/Core'` without the path reference.
+    pod 'MasAppAuth/Core', :path => '../../'
 end

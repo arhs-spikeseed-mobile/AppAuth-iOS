@@ -1,5 +1,9 @@
 # AppAuth for iOS and macOS Changelog
 
+## 1.6.0
+- Rename package name to MasAppAuth
+- Fix thread issue which was not used everywhere. ([#675](https://github.com/openid/AppAuth-iOS/issues/667))
+
 ## 1.5.0
 - Improved tvOS support. ([#111](https://github.com/openid/AppAuth-iOS/issues/111))
 - ASWebAuthenticationSession on macOS. ([#675](https://github.com/openid/AppAuth-iOS/pull/675))

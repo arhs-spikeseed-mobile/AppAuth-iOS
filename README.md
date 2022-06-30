@@ -102,13 +102,13 @@ AppAuth supports four options for dependency management.
 With [CocoaPods](https://guides.cocoapods.org/using/getting-started.html),
 add the following line to your `Podfile`:
 
-    pod 'AppAuth'
+    pod 'MasAppAuth'
 
 Then, run `pod install`.
 
 **tvOS:** Use the `TV` subspec:
 
-    pod 'AppAuth/TV'
+    pod 'MasAppAuth/TV'
 
 
 ### Swift Package Manager

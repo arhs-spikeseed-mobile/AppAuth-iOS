@@ -2,6 +2,6 @@ platform :tvos, '9.0'
 
 target 'Example-tvOS' do
   # AppAuth Pod, TV subspec
-  # In production, just use `pod 'AppAuth/TV'` without the path reference.
-  pod 'AppAuth/TV', :path => '../../'
+  # In production, just use `pod 'MasAppAuth/TV'` without the path reference.
+  pod 'MasAppAuth/TV', :path => '../../'
 end

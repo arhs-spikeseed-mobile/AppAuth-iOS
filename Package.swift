@@ -21,7 +21,7 @@ import PackageDescription
 */
 
 let package = Package(
-    name: "AppAuth",
+    name: "MasAppAuth",
     platforms: [
         .macOS(.v10_10),
         .iOS(.v9),
@@ -33,8 +33,8 @@ let package = Package(
             name: "AppAuthCore",
             targets: ["AppAuthCore"]),
         .library(
-            name: "AppAuth",
-            targets: ["AppAuth"]),
+            name: "MasAppAuth",
+            targets: ["MasAppAuth"]),
         .library(
             name: "AppAuthTV",
             targets: ["AppAuthTV"])
@@ -47,9 +47,9 @@ let package = Package(
             publicHeadersPath: ""
         ),
         .target(
-            name: "AppAuth",
+            name: "MasAppAuth",
             dependencies: ["AppAuthCore"],
-            path: "Source/AppAuth",
+            path: "Source/MasAppAuth",
             sources: ["iOS", "macOS"],
             publicHeadersPath: "",
             cSettings: [
