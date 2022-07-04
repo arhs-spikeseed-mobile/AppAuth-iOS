@@ -455,19 +455,19 @@ static const NSUInteger kExpiryTimeTolerance = 60;
   _needsTokenRefresh = YES;
 }
 
-- (void)performActionWithFreshTokens:(OIDAuthStateAction)action {
-  [self performActionWithFreshTokens:action additionalRefreshParameters:nil];
+- (void)performActionWithCompletion:(OIDAuthStateAction)action {
+  [self performActionWithCompletion:action additionalRefreshParameters:nil];
 }
 
-- (void)performActionWithFreshTokens:(OIDAuthStateAction)action
+- (void)performActionWithCompletion:(OIDAuthStateAction)action
          additionalRefreshParameters:
     (nullable NSDictionary<NSString *, NSString *> *)additionalParameters {
-  [self performActionWithFreshTokens:action
+  [self performActionWithCompletion:action
          additionalRefreshParameters:additionalParameters
                        dispatchQueue:dispatch_get_main_queue()];
 }
 
-- (void)performActionWithFreshTokens:(OIDAuthStateAction)action
+- (void)performActionWithCompletion:(OIDAuthStateAction)action
          additionalRefreshParameters:
     (nullable NSDictionary<NSString *, NSString *> *)additionalParameters
                        dispatchQueue:(dispatch_queue_t)dispatchQueue {

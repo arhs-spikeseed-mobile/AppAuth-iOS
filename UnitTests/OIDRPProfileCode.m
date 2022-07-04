@@ -362,7 +362,7 @@ typedef void (^UserInfoCompletion)(OIDAuthState *_Nullable authState,
        authState.lastAuthorizationResponse.request.configuration.discoveryDocument.userinfoEndpoint;
     XCTAssertNotNil(userinfoEndpoint);
 
-    [authState performActionWithFreshTokens:^(NSString *_Nonnull accessToken,
+    [authState performActionWithCompletion:^(NSString *_Nonnull accessToken,
                                               NSString *_Nonnull idToken,
                                               NSError *_Nullable error) {
       XCTAssertNil(error);
