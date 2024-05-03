@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
@@ -21,9 +21,9 @@ import PackageDescription
 */
 
 let package = Package(
-    name: "MasAppAuth",
+    name: "AppAuth",
     platforms: [
-        .macOS(.v10_10),
+        .macOS(.v10_12),
         .iOS(.v9),
         .tvOS(.v9),
         .watchOS(.v2)
@@ -33,8 +33,8 @@ let package = Package(
             name: "AppAuthCore",
             targets: ["AppAuthCore"]),
         .library(
-            name: "MasAppAuth",
-            targets: ["MasAppAuth"]),
+            name: "AppAuth",
+            targets: ["AppAuth"]),
         .library(
             name: "AppAuthTV",
             targets: ["AppAuthTV"])
@@ -43,14 +43,16 @@ let package = Package(
     targets: [
         .target(
             name: "AppAuthCore",
-            path: "Source/AppAuthCore",
+            path: "Sources/AppAuthCore",
+            resources: [.copy("Resources/PrivacyInfo.xcprivacy")],
             publicHeadersPath: ""
         ),
         .target(
-            name: "MasAppAuth",
+            name: "AppAuth",
             dependencies: ["AppAuthCore"],
-            path: "Source/MasAppAuth",
+            path: "Sources/AppAuth",
             sources: ["iOS", "macOS"],
+            resources: [.copy("Resources/PrivacyInfo.xcprivacy")],
             publicHeadersPath: "",
             cSettings: [
                 .headerSearchPath("iOS"),
@@ -61,7 +63,8 @@ let package = Package(
         .target(
             name: "AppAuthTV",
             dependencies: ["AppAuthCore"],
-            path: "Source/AppAuthTV",
+            path: "Sources/AppAuthTV",
+            resources: [.copy("Resources/PrivacyInfo.xcprivacy")],
             publicHeadersPath: ""
         ),
         .testTarget(
