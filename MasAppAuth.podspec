@@ -19,7 +19,7 @@ It follows the OAuth 2.0 for Native Apps best current practice
 
                    DESC
 
-  s.homepage     = "https://openid.github.io/AppAuth-iOS"
+  s.homepage     = "https://github.com/imranMnts/AppAuth-iOS"
   s.license      = "Apache License, Version 2.0"
   s.authors      = { "William Denniss" => "wdenniss@google.com",
                      "Steven E Wright" => "stevewright@google.com",
@@ -38,7 +38,7 @@ It follows the OAuth 2.0 for Native Apps best current practice
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/openid/AppAuth-iOS.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/imranMnts/AppAuth-iOS", :tag => s.version }
   s.requires_arc = true
 
   s.pod_target_xcconfig = {
@@ -55,8 +55,7 @@ It follows the OAuth 2.0 for Native Apps best current practice
 
   # Subspec for the full AppAuth library, including platform-dependent external user agents.
   s.subspec 'ExternalUserAgent' do |externalUserAgent|
-    externalUserAgent.dependency 'AppAuth/Core'
-    
+    externalUserAgent.dependency 'MasAppAuth/Core'    
     externalUserAgent.source_files = "Sources/AppAuth.h", "Sources/AppAuth/*.{h,m}"
     
     # iOS
@@ -74,8 +73,8 @@ It follows the OAuth 2.0 for Native Apps best current practice
   # Subspec for the full AppAuth library, including platform-dependent external user agents.
   s.subspec 'TV' do |tv|
     tv.source_files = "Sources/AppAuthTV.h", "Sources/AppAuthTV/*.{h,m}"
-    tv.dependency 'AppAuth/Core'
-  end
+    tv.dependency 'MasAppAuth/Core'
+end
 
   s.default_subspecs = 'Core', 'ExternalUserAgent'
 end
